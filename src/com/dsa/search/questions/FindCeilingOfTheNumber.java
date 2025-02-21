@@ -4,15 +4,16 @@ public class FindCeilingOfTheNumber {
 
     public static void main(String[] args) {
         int[] arr = {1,4,6,8,9,12,42,44,46,76,98};
-        int target = 45;
+        int target = 100;
         ceiling(arr , target);
-        System.out.println(arr[ceiling(arr , target)]);
+        System.out.println(ceiling(arr , target));
     }
 
     private static int ceiling(int[] arr , int target){
         int start = 0;
         int end = arr.length-1;
         int mid = -1;
+        if(target > arr[end]) return -1;
         while(start <= end){
              mid = start + (end-start)/2;
             if(target > arr[mid]){
@@ -26,7 +27,5 @@ public class FindCeilingOfTheNumber {
         }
         return start ;
     }
-
-
 
 }
