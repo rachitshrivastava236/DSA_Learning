@@ -10,7 +10,7 @@ public class FirstAndLastOccuranceOfNumber {
         System.out.println(Arrays.toString(searchRange(arr, 7)));
     }
 
-    public int[] searchRange(int[] nums, int target){
+    public static int[] searchRange(int[] nums, int target){
         int[] ans = {-1,-1};
         ans[0]= find(nums , target , true);
         ans[1]= find(nums,target,false);
